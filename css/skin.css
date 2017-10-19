@@ -350,7 +350,7 @@ body,
 	box-shadow: 0 2rem 4.6rem rgba(0,0,0,0);
 }
 .section-block.featured-media{
-	background-color: #181818;
+	background-color: #fff;
 }
 
 /* greyscale */
@@ -1063,12 +1063,12 @@ body,
 
 /* Transparent Header Initial, Hover & Active Colors */
 .header-transparent .navigation .nav-icon{
-	color: rgba(255,255,255,1);
+	color: #33363a);
 	opacity: 1;
 }
 .header-transparent .navigation .nav-icon:hover{
-	color: #fff;
-	opacity: 0.6;
+	color: #111;
+	opacity: 1;
 }
 .header-transparent .navigation .nav-icon.active{
 	color: #fff;

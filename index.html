@@ -1,410 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
-	<meta name="twitter:widgets:theme" content="light">
-	<meta property="og:title" content="Lauren Siminski – Digital Portfolio" />
-	<meta property="og:description" content="Lauren Siminski is a designer & front end developer based in the Baltimore, MD area." />
-	<title>Lauren Siminski</title>
-	<link rel="shortcut icon" type="image/x-icon" href="images/theme-mountain-favicon.ico">
 	
-	<!-- Css -->
-	<link rel="stylesheet" href="css/core.min.css" />
-	<link rel="stylesheet" href="css/skin.css" />
-	<link rel="stylesheet" href="css/style.css" />
-	<link rel="stylesheet" type="text/css" href="css/MyFontsWebfontsKit.css"/>
+  <head>
+	  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Lauren Siminski</title>
 
-	<!--[if lt IE 9]>
-    	<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/MyFontsWebfontsKit.css"/>
+    
+<style>
+body, h1, h2, h3, h4, h5, h6, button, .button, .overlay-info > span > span, .project-title, .product-title, .font-alt-1, .header .navigation > ul > li > a, .side-navigation > ul > li > a, .overlay-navigation > ul > li > a, .counter, .post-info-aside, .accordion > ul > li > a, .tab-nav > li > a, input, textarea {
+	font-family: ClarikaGeometric-Medium, sans-serif!important;
+}	
+#content {
+    background: #ebebeb;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 16px!important;
+}
+h1 {
+	font-size: 36px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin-bottom: 0!important;
+    font-weight: 700;
+}
+span.L {
+    margin-right: 1px;
+}
+div#logo {
+    left: 0px;
+    background: #333;
+    padding: 10px 13px;
+    width: 58px;
+}
+div#logo img {
+	max-width: 32px;
+}
+div#header-content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+header {
+    background: #fff;
+    height: 400px;
+    position: fixed;
+    width: 100%;
+}
+#content {
+    background: #ebebeb;
+    position: relative;
+    top: 400px;
+}
 
-</head>
-<body class="main">
 
-	<!-- Side Navigation Menu -->
-	<aside class="side-navigation-wrapper enter-right" data-no-scrollbar data-animation="scale-in">
-		<div class="side-navigation-scroll-pane">
-			<div class="side-navigation-inner">
-				<div class="side-navigation-header">
-					<div class="navigation-hide side-nav-hide">
-						<a href="#">
-							<span class="icon-cancel medium"></span>
-						</a>
-					</div>
-				</div>
-				<nav class="side-navigation center">
-					<ul>
-						<li class="current">
-							<a href="index.html">Work</a>
-						</li>
-						<li>
-							<a href="journal.html">Journal</a>
-						</li>
-						<li>
-							<a href="about.html">About</a>
-						</li>
-						<li>
-							<a data-content="inline" data-toolbar="" data-aux-classes="tml-contact-modal tml-exit-light rounded" data-modal-mode data-modal-width="700" data-lightbox-animation="fadeIn" href="#contact-modal" class="lightbox-link">Contact</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
+
+
+/* NAV MENU */
+
+ul.ms-nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul.ms-nav a {
+	outline: none !important;
+}
+#ms-menu {
+	display: none;
+}
+.ms-nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.ms-nav > .ms-main {
+	position: relative;
+}
+
+.ms-nav > .ms-li {
+	position: absolute;
+	top: 0;
+	left: 8px;
+	transition: top .5s ease;
+	z-index: 1;
+}
+.ms-nav .ms-menu-toggle:checked ~ .ms-li a {
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.25);
+}
+.ms-nav .ms-menu-toggle:checked ~ .ms-li1 {
+	top: 120%;
+	transition: top .5s ease;
+}
+.ms-nav .ms-menu-toggle:checked ~ .ms-li1 a span {
+	opacity: 1;
+	transition: opacity .5s ease .1s;
+}
+.ms-nav .ms-menu-toggle:checked ~ .ms-li2 {
+	top: 215%;
+	transition: top .6s ease;
+}
+.ms-nav .ms-menu-toggle:checked ~ .ms-li2 a span {
+	opacity: 1;
+	transition: opacity .6s ease .2s;
+}
+.ms-nav .ms-menu-toggle:checked ~ .ms-li3 {
+	top: 310%;
+	transition: top .7s ease;
+}
+.ms-nav .ms-menu-toggle:checked ~ .ms-li3 a span {
+	opacity: 1;
+	transition: opacity .7s ease .3s;
+}
+.ms-nav .ms-menu-toggle:checked ~ .ms-li4 {
+	top: 405%;
+	transition: top .8s ease;
+}
+.ms-nav .ms-menu-toggle:checked ~ .ms-li4 a span {
+	opacity: 1;
+	transition: opacity .8s ease .4s;
+}
+.ms-nav .ms-menu-toggle:checked ~ .ms-main span {
+	transition: transform .35s ease;
+}
+.ms-nav .ms-menu-toggle ~ .ms-main span {
+	transition: transform .35s ease;
+	opacity: 1;
+}
+.ms-nav > .ms-main > a {
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.35);
+}
+.ms-nav > li a {
+	font-size: 30px;
+	color: #FFFFFF;
+	background: #333;
+	width: 60px;
+	height: 60px;
+	display: block;
+	border-radius: 100%;
+	position: relative;
+	text-align: center;
+}
+.ms-nav > .ms-main a,
+.ms-nav > .ms-main > a > label {
+	font-size: 30px;
+	color: #FFFFFF;
+	background: #333;
+	width: 75px;
+	height: 75px;
+	display: block;
+	border-radius: 0;
+	position: relative;
+	text-align: center;
+	z-index: 19;
+}
+.ms-nav > li > a span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	height: 30px;
+	width: 30px;
+	opacity: 0;
+	z-index: 12;
+}
+
+</style>
+    
+  </head>
+  
+  <body>
+	  
+	<header>
+		<div id="header-content">
+			<h1 class="text-center"><span class="L">L</span><!-- auren Siminski --></h1>
 		</div>
-	</aside>
-	<!-- Side Navigation Menu End -->
-
-	<div class="wrapper reveal-side-navigation">
-		<div class="wrapper-inner">
-
-			<!-- Header -->
-			<header class="header with-shadow header-absolute header-fixed-on-mobile header-transparent">
-				<div class="header-inner">
-					<div class="row nav-bar">
-						<div class="column width-12 nav-bar-inner">
-							<div class="logo">
-								<div class="logo-inner">
-									<a href="index.html"><img src="images/ls-white.gif" alt="LS Logo" /></a>
-									<a href="index.html"><img src="images/ls-white.gif" alt="LS Logo" /></a>
-								</div>
-							</div>
-							<nav class="navigation nav-block secondary-navigation nav-right">
-								<ul>
-									<li class="aux-navigation">
-										<!-- Aux Navigation -->
-										<a href="#" class="navigation-show side-nav-show nav-icon">
-											<span class="icon-menu"></span>
-										</a>
-									</li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-				</div>
-			</header>
-			<!-- Header End -->
-
-			<!-- Content -->
-			<div class="content clearfix">
-
-				<!-- Full Width Slider Section -->
-				<section class="section-block featured-media page-intro tm-slider-parallax-container">
-					<div class="tm-slider-container full-width-slider" data-parallax data-parallax-fade-out data-animation="slide" data-scale-under="1140">
-						<ul class="tms-slides">
-							<li class="tms-slide" data-image data-force-fit data-overlay-bkg-color="#000000" data-overlay-bkg-opacity="0.1">
-								<div class="tms-content">
-									<div class="tms-content-inner center">
-										<div class="row">
-											<div class="column width-12">
-												<h1 class="tms-caption title-xlarge color-white mb-10"
-													data-animate-in="preset:scaleOut;duration:1000ms;"
-													data-no-scale
-												>
-													Lauren Siminski
-												</h1>
-											</div>
-										</div>
-									</div>
-								</div>
-								<img data-src="images/slider/slide-project-1-fs.jpg" data-retina src="images/blank.png" alt=""/>
-							</li>
-						</ul>
-						</ul>
-					</div>
-				</section>
-				<!-- Full Width Slider Section -->
-
-				<!-- Portfolio Grid -->
-				<div class="section-block grid-filter-menu center center-on-mobile">
-					<div class="row">
-						<div class="column width-12">
-							<ul>
-								<li>Categories:</li>
-								<li><a class="active" href="#" data-filter="*">All</a></li>
-								<li><a href="#" data-filter=".design">Interactive Design</a></li>
-								<li><a href="#" data-filter=".marketing">Development</a></li>
-								<li><a href="#" data-filter=".photography">Branding</a></li>
-								<li><a href="#" data-filter=".web">Misc.</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="section-block grid-container full-width no-margins fade-in-progressively pt-0 pb-0" data-layout-mode="masonry" data-grid-ratio="1.5" data-animate-filter-duration="700" data-set-dimensions data-animate-resize data-animate-resize-duration="700">
-					<div class="row">
-						<div class="column width-12">
-							<div class="row grid content-grid-4">
-								<div class="grid-item grid-sizer web">
-									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700" data-hover-bkg-color="#000000" data-hover-bkg-opacity="0.5">
-										<a class="overlay-link" href="project-style-one.html">
-											<img src="images/portfolio/grid/large-margins/project-1-landscape.jpg" alt=""/>
-											<span class="overlay-info">
-												<span>
-													<span>
-														<span class="project-title">Warhol</span>
-													</span>
-												</span>
-											</span>
-										</a>
-									</div>
-								</div>
-								<div class="grid-item photography">
-									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700" data-hover-bkg-color="#000000" data-hover-bkg-opacity="0.5">
-										<a class="overlay-link" href="project-style-one.html">
-											<img src="images/portfolio/grid/large-margins/project-5-landscape.jpg" alt=""/>
-											<span class="overlay-info">
-												<span>
-													<span>
-														<span class="project-title">Handy Accessories</span>
-													</span>
-												</span>
-											</span>
-										</a>
-									</div>
-								</div>
-								<div class="grid-item design">
-									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700" data-hover-bkg-color="#000000" data-hover-bkg-opacity="0.5">
-										<a class="overlay-link" href="project-style-one.html">
-											<img src="images/portfolio/grid/large-margins/project-7-landscape.jpg" alt=""/>
-											<span class="overlay-info">
-												<span>
-													<span>
-														<span class="project-title">The Boutique</span>
-													</span>
-												</span>
-											</span>
-										</a>
-									</div>
-								</div>
-								<div class="grid-item large design">
-									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700" data-hover-bkg-color="#000000" data-hover-bkg-opacity="0.5">
-										<a class="overlay-link" href="project-style-one.html">
-											<img src="images/portfolio/grid/large-margins/project-11-landscape-large.jpg" alt=""/>
-											<span class="overlay-info">
-												<span>
-													<span>
-														<span class="project-title">Fieldbook</span>
-													</span>
-												</span>
-											</span>
-										</a>
-									</div>
-								</div>
-								<div class="grid-item portrait marketing photography">
-									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700" data-hover-bkg-color="#000000" data-hover-bkg-opacity="0.5">
-										<a class="overlay-link" href="project-style-one.html">
-											<img src="images/portfolio/grid/large-margins/project-14-portrait.jpg" alt=""/>
-											<span class="overlay-info">
-												<span>
-													<span>
-														<span class="project-title">Discover</span>
-													</span>
-												</span>
-											</span>
-										</a>
-									</div>
-								</div>
-								<div class="grid-item web">
-									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700" data-hover-bkg-color="#000000" data-hover-bkg-opacity="0.5">
-										<a class="overlay-link" href="project-style-one.html">
-											<img src="images/portfolio/grid/large-margins/project-13-landscape.jpg" alt=""/>
-											<span class="overlay-info">
-												<span>
-													<span>
-														<span class="project-title">Pear</span>
-													</span>
-												</span>
-											</span>
-										</a>
-									</div>
-								</div>
-								<div class="grid-item large design">
-									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700" data-hover-bkg-color="#000000" data-hover-bkg-opacity="0.5">
-										<a class="overlay-link" href="project-style-one.html">
-											<img src="images/portfolio/grid/large-margins/project-17-landscape-large.jpg" alt=""/>
-											<span class="overlay-info">
-												<span>
-													<span>
-														<span class="project-title">Typographico</span>
-													</span>
-												</span>
-											</span>
-										</a>
-									</div>
-								</div>
-								<div class="grid-item photography">
-									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700" data-hover-bkg-color="#000000" data-hover-bkg-opacity="0.5">
-										<a class="overlay-link" href="project-style-one.html">
-											<img src="images/portfolio/grid/large-margins/project-12-landscape.jpg" alt=""/>
-											<span class="overlay-info">
-												<span>
-													<span>
-														<span class="project-title">O Fishy</span>
-													</span>
-												</span>
-											</span>
-										</a>
-									</div>
-								</div>
-								<div class="grid-item portrait marketing">
-									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700" data-hover-bkg-color="#000000" data-hover-bkg-opacity="0.5">
-										<a class="overlay-link" href="project-style-one.html">
-											<img src="images/portfolio/grid/large-margins/project-13-portrait.jpg" alt=""/>
-											<span class="overlay-info">
-												<span>
-													<span>
-														<span class="project-title">Forrrst</span>
-													</span>
-												</span>
-											</span>
-										</a>
-									</div>
-								</div>
-								<div class="grid-item marketing">
-									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700" data-hover-bkg-color="#000000" data-hover-bkg-opacity="0.5">
-										<a class="overlay-link" href="project-style-one.html">
-											<img src="images/portfolio/grid/large-margins/project-16-landscape.jpg" alt=""/>
-											<span class="overlay-info">
-												<span>
-													<span>
-														<span class="project-title">Kant Book</span>
-													</span>
-												</span>
-											</span>
-										</a>
-									</div>
-								</div>
-								<div class="grid-item marketing">
-									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700" data-hover-bkg-color="#000000" data-hover-bkg-opacity="0.5">
-										<a class="overlay-link" href="project-style-one.html">
-											<img src="images/portfolio/grid/large-margins/project-6-landscape.jpg" alt=""/>
-											<span class="overlay-info">
-												<span>
-													<span>
-														<span class="project-title">Alike</span>
-													</span>
-												</span>
-											</span>
-										</a>
-									</div>
-								</div>
-								<div class="grid-item marketing">
-									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700" data-hover-bkg-color="#000000" data-hover-bkg-opacity="0.5">
-										<a class="overlay-link" href="project-style-one.html">
-											<img src="images/portfolio/grid/large-margins/project-18-landscape.jpg" alt=""/>
-											<span class="overlay-info">
-												<span>
-													<span>
-														<span class="project-title">Brooks</span>
-													</span>
-												</span>
-											</span>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Portfolio Grid End -->
-
-			</div>
-			<!-- Content End -->
-
-			<!-- Footer -->
-			<footer class="footer footer-light">
-				<div class="footer-top">
-					<div class="row flex">
-						<div class="column width-4">
-							<div class="widget">
-								<h4 class="widget-title">About</h4>
-								<p>Lauren Siminski is a designer & front end developer based in the Baltimore, MD area. &nbsp;<!-- <a href="about.html">[ » ]</a> --></p>
-								<ul class="social-list list-horizontal clear-float-on-mobile">
-									<li><a href="#" target="_blank"><span class="icon-linkedin-with-circle medium"></span></a></li>
-									<li><a href="#" target="_blank"><span class="icon-twitter-with-circle medium"></span></a></li>
-									<li><a href="#" target="_blank"><span class="icon-instagram-with-circle medium"></span></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="column width-3 offset-1">
-							<div class="widget">
-								<h4 class="widget-title">Navigation</h4>
-								<ul class="list-group large">
-									<li>
-										<a href="index.html">Work</a>
-									</li>
-									<li>
-										<a href="journal.html">Journal</a>
-									</li>
-									<!--
-<li>
-										<a href="about.html">About</a>
-									</li>
--->
-									<li>
-										<a href="#" class="scroll-to-top" data-no-hide>Back to Top</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="column width-4">
-							<div class="widget">
-								<h4 class="widget-title">Contact Me</h4>
-								<p class="mb-20">Opportunities? &nbsp;Freelance inquiries? &nbsp;Looking to collaborate? – Let's chat.</p>
-								<a data-content="inline" data-toolbar="" data-aux-classes="tml-contact-modal tml-exit-light rounded" data-modal-mode data-modal-width="700" data-lightbox-animation="fadeIn" href="#contact-modal" class="lightbox-link button rounded bkg-theme bkg-hover-green color-white color-hover-white">Shoot me an email</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</footer>
-			<!-- Footer End -->
-			
-			<div id="contact-modal" class="section-block pt-0 pb-30 background-none hide">
-
-			<!-- Form -->
-				<div class="row">
-					<div class="column width-10 offset-1">
-						<div class="signup-form-container">
-							<form class="contact-form" action="php/send-email.php" method="post" novalidate>
-								<div class="row">
-									<div class="column width-12">
-										<div class="footer">
-										<h4 class="widget-title">Contact Me</h4>
-										</div>
-									</div>
-									<div class="column width-12">
-										<input type="text" name="fname" class="form-fname form-element large" placeholder="Name*" tabindex="1" required>
-									</div>
-									<div class="column width-12">
-										<input type="email" name="email" class="form-email form-element large" placeholder="Email Address*" tabindex="3" required>
-									</div>
-									<div class="column width-6">
-										<input type="text" name="honeypot" class="form-honeypot form-element large">
-									</div>
-								</div>
-								<div class="row">
-									<div class="column width-12">
-										<div class="field-wrapper">
-											<textarea name="message" class="form-message form-element rounded large" placeholder="Message*" tabindex="7" required></textarea>
-										</div>
-									</div>
-									<div class="column width-12">
-										<input type="submit" value="Send" class="form-submit button rounded bkg-theme color-white color-hover-white">
-									</div>
-								</div>
-							</form>
-							<div class="form-response center"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Form End -->
-
-		</div>
+	</header>	 
+	
+	<div id="content" style="height: 8000px;">
+		
+	<ul class="ms-nav sticky-top">
+		<input type="checkbox" id="ms-menu" class="ms-menu-toggle" name="ms-menu-toggle" />
+		<div class="bg-change"></div>
+		<li id="logo" class="ms-main">
+			<a href="javascript:void(0)">
+				<label class="ms-menu-toggle-lbl" for="ms-menu">
+					<img src="images/ls-white.gif">
+				</label>
+			</a>
+		</li>
+		<li class="ms-li ms-li1 ms-li-first">
+			<a href="#">
+				<span class="fa fa-code"></span>
+			</a>
+		</li>
+		<li class="ms-li ms-li2">
+			<a href="#">
+				<span class="fa fa-book"></span>
+			</a>
+		</li>
+		<li class="ms-li ms-li3 ms-li-last">
+			<a href="#">
+				<span class="fa fa-comments"></span>
+			</a>
+		</li>
+	</ul>
+<!-- 		<div id="logo" class="sticky-top"><img src="images/ls-white.gif"></div> -->
 	</div>
 
-	<!-- Js -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="http://maps.googleapis.com/maps/api/js?v=3"></script>
-	<script src="js/timber.master.min.js"></script>
-</body>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    
+  </body>
+  
 </html>
