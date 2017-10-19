@@ -34,11 +34,14 @@ span.L {
 #logo {
     left: 0px;
     background: #333;
-    padding: 10px 13px;
-    width: 58px;
 }
 #logo img {
-	max-width: 32px;
+    max-width: 36px;
+    margin-top: 16px;
+    margin-right: 2px;
+}
+label.ms-menu-toggle-lbl {
+    margin-bottom: 0!important;
 }
 div#header-content {
     position: relative;
@@ -184,33 +187,34 @@ ul.ms-nav a {
 	</header>	 
 	
 	<div id="content" style="height: 8000px;">
-		
-	<ul class="ms-nav sticky-top">
-		<input type="checkbox" id="ms-menu" class="ms-menu-toggle" name="ms-menu-toggle" />
-		<div class="bg-change"></div>
-		<li id="logo" class="ms-main">
-			<a href="javascript:void(0)">
-				<label class="ms-menu-toggle-lbl" for="ms-menu">
-					<img src="images/ls-white.gif">
-				</label>
-			</a>
-		</li>
-		<li class="ms-li ms-li1 ms-li-first">
-			<a href="#">
-				<span class="fa fa-code"></span>
-			</a>
-		</li>
-		<li class="ms-li ms-li2">
-			<a href="#">
-				<span class="fa fa-book"></span>
-			</a>
-		</li>
-		<li class="ms-li ms-li3 ms-li-last">
-			<a href="#">
-				<span class="fa fa-comments"></span>
-			</a>
-		</li>
-	</ul>
+	
+	<div id="nav" class="sticky-top">	
+		<ul class="ms-nav">
+			<input type="checkbox" id="ms-menu" class="ms-menu-toggle" name="ms-menu-toggle" />
+			<li id="logo" class="ms-main">
+				<a href="javascript:void(0)">
+					<label class="ms-menu-toggle-lbl" for="ms-menu">
+						<img src="images/ls-white.gif">
+					</label>
+				</a>
+			</li>
+			<li class="ms-li ms-li1 ms-li-first">
+				<a href="#">
+					<span class="fa fa-code"></span>
+				</a>
+			</li>
+			<li class="ms-li ms-li2">
+				<a href="#">
+					<span class="fa fa-book"></span>
+				</a>
+			</li>
+			<li class="ms-li ms-li3 ms-li-last">
+				<a href="#">
+					<span class="fa fa-comments"></span>
+				</a>
+			</li>
+		</ul>
+	</div>
 <!-- 		<div id="logo" class="sticky-top"><img src="images/ls-white.gif"></div> -->
 	</div>
 
