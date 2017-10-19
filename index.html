@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 16px!important;
 }
 h1 {
-	font-size: 36px;
+	font-size: 26px;
     letter-spacing: 1.4px;
     text-transform: uppercase;
     margin-bottom: 0!important;
@@ -54,17 +54,26 @@ div#header-content {
 }
 header {
     background: #fff;
-    height: 400px;
+    height: 260px;
     position: fixed;
     width: 100%;
 }
 #content {
     background: #ebebeb;
     position: relative;
-    top: 400px;
+    top: 260px;
+}
+div#content:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 360px;
+    background: linear-gradient(transparent 40%, #fff 80%);
+    top: -260px;
 }
 
-
+/* Contact Form */
 
 .modal-dialog {
     max-width: 100%!important;
@@ -88,13 +97,37 @@ header {
 
 
 
-/* NAV MENU */
+/* Portfolio */
+
+.clearfix:after, .clearfix:before, .row:after, .row:before {
+	display: none!important;
+}
+div#project {
+    height: 160px;
+    overflow: hidden;
+}
+div#project img {
+    height: 100%;
+    width: auto!important;
+    max-width: 1000%;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    transition: ease 0.4s!important;
+}
+div#project:hover img {
+    height: 115%;
+}
+
+
+/* Nav Menu */
 
 ul.ms-nav {
     margin: 0;
     padding: 0;
     list-style: none;
-    left: 20px;
+    left: 10px;
 }
 ul.ms-nav a {
 	outline: none !important;
@@ -165,7 +198,7 @@ ul.ms-nav a {
 }
 .ms-nav > li a {
 	font-size: 22px;
-	color: #ddd;
+	color: #aaa;
 	background: #fff;
 	width: 60px;
 	height: 60px;
@@ -221,20 +254,68 @@ ul.ms-nav a {
 	margin-top: 19.5px;
 }
 
+
+
+
+
+@media (min-width: 575px) {
+
+header {
+    height: 400px;
+}
+#content {
+    top: 400px;
+}
+div#content:before {
+    height: 500px;
+    top: -400px;
+}
+h1 {
+    font-size: 36px;
+}
+div#project {
+    height: 300px;
+    overflow: hidden;
+}
+ul.ms-nav {
+    left: 20px;
+}
+.ms-nav > li a {
+    color: #ddd;
+}
+	
+}
+
+@media (min-width: 767px) {
+	
+}
+
+@media (min-width: 991px) {
+	
+}
+
+@media (min-width: 1199px) {
+	
+}
+
+
 </style>
     
   </head>
   
   <body>
 	  
+	<!-- Topbar -->  
 	<header>
 		<div id="header-content">
 			<h1 class="text-center"><span class="L">L</span>auren Siminski</h1>
 		</div>
-	</header>	 
+	</header>	
+	<!-- End Topbar --> 
 	
-	<div id="content" style="height: 8000px;">
+	<div id="content">
 	
+	<!-- Nav -->
 	<div id="nav" class="sticky-top">	
 		<ul class="ms-nav">
 			<input type="checkbox" id="ms-menu" class="ms-menu-toggle" name="ms-menu-toggle" />
@@ -251,7 +332,7 @@ ul.ms-nav a {
 				</a>
 			</li>
 			<li class="ms-li ms-li2">
-				<a href="#">
+				<a href="journal.html">
 					<span class="fa fa-book"></span>
 				</a>
 			</li>
@@ -262,48 +343,126 @@ ul.ms-nav a {
 			</li>
 		</ul>
 	</div>
+	<!-- End Nav -->
 	
 	<!-- Form -->
 	<div id="contact-modal" class="section-block pt-0 pb-30 background-none hide">
-				<div class="row">
-					<div class="column width-10 offset-1">
-						<div class="signup-form-container">
-							<form class="contact-form" action="php/send-email.php" method="post" novalidate>
-								<div class="row">
-									<div class="column width-12">
-										<div class="footer">
-										<h4 class="widget-title">Contact Me</h4>
-										</div>
-									</div>
-									<div class="column width-12">
-										<input type="text" name="fname" class="form-fname form-element large" placeholder="Name*" tabindex="1" required>
-									</div>
-									<div class="column width-12">
-										<input type="email" name="email" class="form-email form-element large" placeholder="Email Address*" tabindex="3" required>
-									</div>
-									<div class="column width-6">
-										<input type="text" name="honeypot" class="form-honeypot form-element large">
-									</div>
+		<div class="row">
+			<div class="column width-10 offset-1">
+				<div class="signup-form-container">
+					<form class="contact-form" action="php/send-email.php" method="post" novalidate>
+						
+						<div class="row">
+							<div class="column width-12">
+								<div class="footer">
+								<h4 class="widget-title">Contact Me</h4>
 								</div>
-								<div class="row">
-									<div class="column width-12">
-										<div class="field-wrapper">
-											<textarea name="message" class="form-message form-element rounded large" placeholder="Message*" tabindex="7" required></textarea>
-										</div>
-									</div>
-									<div class="column width-12">
-										<input type="submit" value="Send" class="form-submit button rounded bkg-theme color-white color-hover-white">
-									</div>
-								</div>
-							</form>
-							<div class="form-response center"></div>
+							</div>
+							<div class="column width-12">
+								<input type="text" name="fname" class="form-fname form-element large" placeholder="Name*" tabindex="1" required>
+							</div>
+							<div class="column width-12">
+								<input type="email" name="email" class="form-email form-element large" placeholder="Email Address*" tabindex="3" required>
+							</div>
+							<div class="column width-6">
+								<input type="text" name="honeypot" class="form-honeypot form-element large">
+							</div>
 						</div>
-					</div>
+						<div class="row">
+							<div class="column width-12">
+								<div class="field-wrapper">
+									<textarea name="message" class="form-message form-element rounded large" placeholder="Message*" tabindex="7" required></textarea>
+								</div>
+							</div>
+							<div class="column width-12">
+								<input type="submit" value="Send" class="form-submit button rounded bkg-theme color-white color-hover-white">
+							</div>
+						</div>
+						
+					</form>
+					<div class="form-response center"></div>
 				</div>
 			</div>
-			<!-- Form End -->
+		</div>
 	</div>
-<!-- 		<div id="logo" class="sticky-top"><img src="images/ls-white.gif"></div> -->
+	<!-- End Form -->
+	
+	<div id="portfolio" class="container-fluid p-0">
+		<div class="row mw-100">
+			
+			<div id="project" class="col-6 col-md-4 col-xl-3 p-0">
+				<a href="portfolio/project.html">
+					<img src="images/portfolio/grid/large-margins/hero-2.jpg">
+				</a>
+			</div>
+			
+			<div id="project" class="col-6 col-md-4 col-xl-3 p-0">
+				<a href="portfolio/project.html">
+					<img src="images/portfolio/grid/large-margins/hero-3.jpg">
+				</a>
+			</div>
+			
+			<div id="project" class="col-6 col-md-4 col-xl-3 p-0">
+				<a href="portfolio/project.html">
+					<img src="images/portfolio/grid/large-margins/hero-4.jpg">
+				</a>
+			</div>
+			
+			<div id="project" class="col-6 col-md-4 col-xl-3 p-0">
+				<a href="portfolio/project.html">
+					<img src="images/portfolio/grid/large-margins/hero-1.jpg">
+				</a>
+			</div>
+			
+			<div id="project" class="col-6 col-md-4 col-xl-3 p-0">
+				<a href="portfolio/project.html">
+					<img src="images/portfolio/grid/large-margins/hero-4.jpg">
+				</a>
+			</div>
+			
+			<div id="project" class="col-6 col-md-4 col-xl-3 p-0">
+				<a href="portfolio/project.html">
+					<img src="images/portfolio/grid/large-margins/hero-1.jpg">
+				</a>
+			</div>
+			
+			<div id="project" class="col-6 col-md-4 col-xl-3 p-0">
+				<a href="portfolio/project.html">
+					<img src="images/portfolio/grid/large-margins/hero-2.jpg">
+				</a>
+			</div>
+			
+			<div id="project" class="col-6 col-md-4 col-xl-3 p-0">
+				<a href="portfolio/project.html">
+					<img src="images/portfolio/grid/large-margins/hero-3.jpg">
+				</a>
+			</div>
+			
+			<div id="project" class="col-6 col-md-4 col-xl-3 p-0">
+				<a href="portfolio/project.html">
+					<img src="images/portfolio/grid/large-margins/hero-4.jpg">
+				</a>
+			</div>
+			
+			<div id="project" class="col-6 col-md-4 col-xl-3 p-0">
+				<a href="portfolio/project.html">
+					<img src="images/portfolio/grid/large-margins/hero-1.jpg">
+				</a>
+			</div>
+			
+			<div id="project" class="col-6 col-md-4 col-xl-3 p-0">
+				<a href="portfolio/project.html">
+					<img src="images/portfolio/grid/large-margins/hero-2.jpg">
+				</a>
+			</div>
+			
+			<div id="project" class="col-6 col-md-4 col-xl-3 p-0">
+				<a href="portfolio/project.html">
+					<img src="images/portfolio/grid/large-margins/hero-3.jpg">
+				</a>
+			</div>
+			
+		</div>		
 	</div>
 
 
